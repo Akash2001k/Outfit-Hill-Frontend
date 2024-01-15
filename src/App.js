@@ -46,7 +46,7 @@ function App() {
         <Route path='/kids' element={<Kids />} />
         <Route path='/homeandliving' element={<HomeAndLiving />} />
         <Route path='/preview/:id' element={<Preview />} />
-        <Route path='admin/dashboard/' element={<Dashboard />} />
+        
 
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
@@ -59,6 +59,7 @@ function App() {
           <Route path='admin/updateproduct/:id' element={<UpdateProduct />} />
           <Route path='admin/allorder/' element={<AllOrders />} />
           <Route path='admin/orderdetails/' element={<MoreDetails />} />
+          <Route path='admin/dashboard/' element={<Dashboard />} />
           
 
         </Route>
