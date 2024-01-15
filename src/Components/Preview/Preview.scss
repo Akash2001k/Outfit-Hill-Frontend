@@ -1,0 +1,41 @@
+.preview{
+    display: flex;
+    .img_div{
+        width: 50%;
+        position: relative;
+        // border: 1px solid blue;
+        
+        >img{
+            border-radius: 5px;
+            width: 350px;
+        }
+
+        >div{
+            font-size: 17px;
+            background: #e8597b;
+            width: 100px;
+            padding: 2px 10px;
+            color: white;
+            border-radius: 40px;
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            left: 50%;
+            top:-3%
+        }
+    }
+    .content_div{
+        width: 50%;
+        // border: 1px solid red;
+
+        .starrating{
+        //    border: 1px solid;
+           width: 180px;
+           height: 40px;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    
+}

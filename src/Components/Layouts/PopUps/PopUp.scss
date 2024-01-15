@@ -1,0 +1,60 @@
+.popup {
+    padding: 7px 10px;
+    background: #dcffdd;
+    border-radius: 5px;
+    width: 30%;
+    position: absolute;
+    transition: all 5s ease-in-out;
+    z-index: 1000;  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top:16%;
+    right: 6%;
+    animation-name: example;
+    animation-duration: 0.4s;
+  }
+  .popup .content{
+    display: flex;
+    align-items: center;
+  }
+
+  .popup .content svg{
+    font-size: 43px;
+    color: rgb(15, 114, 22)
+  }
+  
+  .popup .close {
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    
+  }
+  
+  .popup .close:hover {
+    color: rgb(15, 114, 22);
+    transform: rotate(90deg);
+  }
+
+  @keyframes example {
+    0%   { right:0%;top:16%}
+    50%  { right:6%;top:16%}
+  }
+
+  .popup .close_error {
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    
+  }
+  
+  .popup .close_error:hover {
+    color: #e85454;
+    transform: rotate(90deg);
+  }

@@ -1,0 +1,17 @@
+.cart_row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .cart_card {
+        height: 130px;
+        // border: 1px solid;
+        width: 350px;
+        margin: 8px;
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.174);
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

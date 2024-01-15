@@ -1,0 +1,40 @@
+.CompleteOrderDetails {
+    background: url('../../../Assets/bg.JPG');
+    background-size: cover;
+    min-height: 100vh;
+    padding: 100px 0 20px;
+
+    >.container {
+        box-shadow: 3px 3px 7px 1px rgba(22, 21, 21, 0.134);
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+
+        >.fields {
+            display:flex;
+            justify-content:space-between;
+            margin: 3px 0;
+            
+            
+        }
+        .key{
+            font-weight: 600;
+            color:rgb(56, 56, 56)
+            
+        }
+        .value1{
+            font-weight: 600;
+            text-transform: uppercase;
+            color: rgb(49, 114, 198);
+        }
+        .bill{
+            
+            margin-top: 70px;
+            .bill_field{
+                display:flex;
+                justify-content:space-between;
+                margin: 3px 0;
+            }
+        }
+    }
+}

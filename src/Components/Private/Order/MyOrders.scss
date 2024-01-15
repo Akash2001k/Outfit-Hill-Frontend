@@ -1,0 +1,45 @@
+.myOrders {
+    background: url('../../../Assets/bg.JPG');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding: 100px 0 20px;
+
+    >.container {
+        >.order_cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            // border:1px solid;
+            padding: 0 8px;
+            box-shadow: 3px 3px 7px 1px rgba(22, 21, 21, 0.134);
+            background: #ffffff;
+            border-radius: 10px;
+            min-height: 12vh;
+            margin: 7px 0;
+
+            .order_card_field{
+                // border: 1px solid red;
+                margin: auto;
+                
+                >.field{
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    color: rgb(47, 115, 203);
+                }
+
+                .head{
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+
+                p{
+                    color:rgb(47, 115, 203);
+                    cursor:pointer
+                }
+            }
+
+        }
+    }
+}

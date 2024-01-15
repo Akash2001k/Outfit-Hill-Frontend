@@ -1,0 +1,83 @@
+.moreDetails {
+    padding: 110px 0 40px 0;
+    background: url('../../../Assets/bg.JPG');
+    background-size: cover;
+    background-position: center;
+
+    .container {
+        display: flex;
+        box-shadow: 3px 3px 7px 1px rgba(22, 21, 21, 0.134);
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+
+        select {
+            width: 90%;
+            border: none;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.529);
+            padding: 5px 1px;
+            margin-top: -10px;
+            text-transform: capitalize;
+
+            &:focus {
+                outline: none;
+                border-color: #e96070;
+            }
+
+            option {
+                text-transform: capitalize;
+            }
+        }
+
+        .field {
+            margin: 7px 0;
+
+            .key {
+                font-size: 17px;
+                color: #444444;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+
+            .value {
+                font-size: 17px;
+                margin: 0 8px;
+                font-weight: 600;
+                color: #3b75cb;
+            }
+        }
+
+        h4 {
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #636363;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: 600;
+            color: rgb(69, 69, 69);
+        }
+
+        .orderDetails {
+            width: 50%;
+            // border: 1px solid red;
+            padding: 0 19px 0 0;
+            border-right: 2px solid silver;
+        }
+
+        .userDetails {
+            width: 50%;
+
+            // border: 1px solid red;
+
+            padding: 0 0 0 19px;
+
+
+
+
+
+            .details {}
+        }
+    }
+}

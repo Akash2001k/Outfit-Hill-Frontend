@@ -1,0 +1,146 @@
+nav {
+    position: fixed;
+    width: 100%;
+    background: white;
+    box-shadow: 1px 1px 10px 1px #0000001e;
+    display: flex;
+    z-index: 2;
+    padding: 0 10px;
+
+    >.nav_first {
+        display: flex;
+        align-items: center;
+        width: 60%;
+        //   border: 1px solid red;
+
+        ul {
+            display: flex;
+
+            li {
+                list-style: none;
+                margin: 10px 10px 0;
+
+                a {
+                    text-decoration: none;
+                    color: rgb(41, 41, 41);
+                    font-weight: 600;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    transition: 0.4s;
+                    // letter-spacing: 1px;
+
+                    &:hover{
+                        color: #e8597b;
+                    }
+                }
+            }
+        }
+    }
+
+    >.nav_second {
+        display: flex;
+        align-items: center;
+        width: 40%;
+        // border: 1px solid rgb(17, 255, 0);
+        justify-content: right;
+
+        svg {
+            font-size: 27px;
+            cursor: pointer;
+            margin: 0 10px 0;
+            color: #e8597b;
+        }
+
+    }
+}
+
+// ======================== Slider ===================================
+
+.MenuSlider {
+    height: 100vh;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.3s;
+    background: #fcfcfc;
+    box-shadow: 1px 1px 10px 1px #0000001e;
+
+    .slider {
+        padding: 90px 20px 20px;
+
+        .nav_items_sm {
+            display: none;
+        }
+
+        ul {
+
+            // border: 1px solid;
+            >li {
+                list-style: none;
+                margin: 7px -25px;
+
+                >a {
+                    text-decoration: none;
+                    color: #464646;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    font-size: 15px;
+
+                    transition: 0.4s;
+
+                    &:hover{
+                        color: #e8597b;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 990px) {
+    nav .nav_first ul {
+        display: none;
+    }
+
+    .MenuSlider .slider .nav_items_sm {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width: 570px) {
+
+    nav{
+        .nav_second {
+
+            .searchInputDiv {
+                width: 200px;
+    
+                
+            }
+    
+    
+        }
+    }
+
+}
+
+@media screen and (max-width: 460px) {
+
+    nav{
+        .nav_second {
+    
+            svg {
+                font-size: 25px;
+                cursor: pointer;
+                margin: 0 3px 0;
+                color: #e8597b;
+            }
+    
+        }
+    }
+
+}

@@ -1,0 +1,45 @@
+.WebPages {
+    padding: 100px 0 20px;
+}
+
+
+.heading_searchbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // border: 1px solid;
+    align-items: center;
+    margin: 10px 0;
+
+    h4{
+        font-weight: 400;
+        text-transform: uppercase;
+        // letter-spacing: 2px;
+        color: #636363;
+    }
+
+    .searchInputDiv {
+        border: 1px solid #e8597b;
+        margin: 0 10px;
+        padding: 4px 10px 4px;
+        width: 320px;
+        display: flex;
+        border-radius: 100px;
+        justify-content: center;
+        align-items: center;
+    
+        >input {
+            border: none;
+            width: 85%;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+
+        svg{
+            color: #636363;
+            font-size:23px;
+        }
+    }
+}

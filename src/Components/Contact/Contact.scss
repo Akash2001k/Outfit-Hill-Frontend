@@ -1,0 +1,55 @@
+.contact {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url('../../Assets/bg2.JPG');
+    background-size: cover;
+
+    >.container {
+        display: flex;
+
+        >.contact_form {
+            width: 50%;
+
+            label{
+                text-transform: uppercase;
+                font-weight: 600;
+                color: #373737;
+            }
+            input{
+                border: none;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.529);
+                padding: 5px 1px;
+                width: 100%;
+                background: none;
+        
+                &:focus{
+                    outline: none;
+                    border-color: #e96070;
+                }
+            }
+            textarea{
+                width: 100%;
+                height: 120px;
+                
+
+                &:focus{
+                    outline: none;
+                    border: 2px solid #e96070;
+                }
+            }
+        }
+
+        .contact_img {
+          width: 50%;
+          position: relative;
+          >img{
+            width: 600px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: -100px;
+          }
+        }
+    }
+}

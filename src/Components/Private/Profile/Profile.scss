@@ -1,0 +1,124 @@
+.profile {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    background: url('../../../Assets/bg.JPG');
+    background-size: cover;
+    background-position: center;
+
+    .Profile_div {
+        display: flex;
+        box-shadow: 3px 3px 7px 1px rgba(22, 21, 21, 0.134);
+        background: #ffffff;
+        border-radius: 10px;
+
+        >.profile_pic {
+            width: 27%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 0 12px;
+
+            >img {
+                width: 250px;
+            }
+
+            .btn-div {
+                display: flex;
+                justify-content: left;
+                width: 90%;
+                margin-top: 30%
+            }
+        }
+
+        >.profile_content {
+            width: 70%;
+            padding: 40px 20px;
+
+
+            .emailPhone {
+                font-weight: 600;
+                color: rgb(78, 78, 78);
+                font-size: 19px;
+            }
+
+            p {
+                font-weight: 600;
+                color: rgb(33, 33, 33);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .profile {
+       
+       
+        .Profile_div {
+
+            >.profile_pic {
+
+                >img {
+                    width: 180px;
+                }
+
+                .btn-div {
+                    display: flex;
+                    justify-content: left;
+                    width: 90%;
+                    margin-top: 45%
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .profile {
+
+        display: block;
+
+        padding-top: 100px;
+        .Profile_div {
+            flex-direction: column;
+            
+            
+
+            >.profile_pic {
+                width: 100%;
+                padding:5px 0 ;
+
+                >img {
+                    width: 180px;
+                }
+
+                .btn-div {
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    margin-top: 10px
+                }
+
+            }
+
+            >.profile_content {
+                width: 100%;
+                padding: 40px 20px;
+    
+    
+                .emailPhone {
+                    font-weight: 600;
+                    color: rgb(78, 78, 78);
+                    font-size: 19px;
+                }
+    
+                p {
+                    font-weight: 600;
+                    color: rgb(33, 33, 33);
+                }
+            }
+        }
+    }
+}

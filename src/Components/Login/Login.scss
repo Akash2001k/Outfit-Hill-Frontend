@@ -1,0 +1,106 @@
+.login{
+    padding: 80px 0 0 0;
+    height: 100vh;
+    background-image: url('../../Assets/clouds.JPG');
+    background-size: cover;
+    background-position: center;
+
+    >.container{
+        display: flex;
+        // border: 1px solid;
+      >.form{
+        width: 50%;
+        // border: 1px solid;
+
+        h3{
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #636363;
+          margin:6px 0 20px
+        }
+        label{
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #373737;
+        }
+        input{
+            border: none;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.529);
+            padding: 5px 1px;
+            width: 60%;
+        
+            &:focus{
+                outline: none;
+                border-color: #e96070;
+            }
+        }
+      }
+      >.img{
+        width: 50%;
+        -webkit-animation: shimmy 2s infinite;
+                animation: shimmy 2s infinite;
+                -webkit-animation-direction: alternate;
+                animation-direction: alternate;
+        >img{
+            width: 500px;
+            margin: 130px 0 0 50px;
+        }
+      }
+    }
+}
+
+@keyframes shimmy {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    100% {
+        -webkit-transform: translate(0, 30px);
+        transform: translate(0, 20px);
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .login{
+        padding: 40px 10px; 
+        >.container{
+          >.form{
+            
+            input{
+              width: 65%;
+            }
+          }
+          >.img{
+            >img{
+                width: 350px;
+                margin: 130px 0 0 0;
+            }
+          }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    .login{
+        justify-content: center;
+        >.container{
+            flex-direction: column;
+          >.form{
+              width: 100%;
+            input{
+               width: 100%;
+            }
+          }
+          >.img{
+            width: 100%;
+            >img{
+                width: 300px;
+                margin: 0;
+            }
+          }
+        }
+    }
+    
+}
