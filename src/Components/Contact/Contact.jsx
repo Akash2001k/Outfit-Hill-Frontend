@@ -67,7 +67,7 @@ const Contact = () => {
     <div className='contact'>
       <div className=' container'>
         <div className='contact_form'>
-          <h3 className='mb-4'>Add New Product</h3>
+          <h3 className='mb-4'>Contact Us</h3>
 
           <div className='col my-1'>
             <span>Name</span><br />

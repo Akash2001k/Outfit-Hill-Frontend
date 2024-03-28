@@ -13,25 +13,53 @@ export const AuthProvider = ({ children }) => {
     }
 
     //JWT AUTHENTICATION - to get logedIn user data
-    const userAuthentication = async () => {
-        try {
-            const response = await fetch('http://localhost:7000/auth/user', {
-                method: "GET",
-                headers: {
-                    Authorization: `Bearer ${localStorage.getItem('token')}`
-                }
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                setUser(data.userData);
-                // console.log(JSON.stringify(data, null, 2));
-            }
-
-        } catch (error) {
-            console.log("Error Fetching user Data" + error);
+const userAuthentication = async () => {
+    try {
+        // Check if token exists in localStorage
+        const token = localStorage.getItem('token');
+        if (!token) {
+            // Token doesn't exist, user is not authenticated
+            return;
         }
-    };
+
+        // Check if the token timestamp is older than 24 hours
+        const tokenTimestamp = localStorage.getItem('tokenTimestamp');
+        if (tokenTimestamp) {
+            const currentTime = new Date().getTime();
+            const storedTime = new Date(tokenTimestamp).getTime();
+            const twentyFourHours = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
+
+            if (currentTime - storedTime >= twentyFourHours) {
+                // Token is older than 24 hours, clear localStorage
+                localStorage.removeItem('token');
+                localStorage.removeItem('tokenTimestamp');
+                return;
+            }
+        }
+
+        // Token is valid, proceed with authentication
+        const response = await fetch('http://localhost:7000/auth/user', {
+            method: "GET",
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            setUser(data.userData);
+            // Update token timestamp
+            localStorage.setItem('tokenTimestamp', new Date());
+        } else {
+            // Handle authentication failure
+            // For example, clear token from localStorage
+            localStorage.removeItem('token');
+            localStorage.removeItem('tokenTimestamp');
+        }
+    } catch (error) {
+        console.log("Error Fetching user Data" + error);
+    }
+};
 
     useEffect(() => {
         userAuthentication()

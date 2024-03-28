@@ -17,9 +17,9 @@ const Footer = () => {
                 <aside>
                     <h4>Follow Us</h4>
                     <div className='socialMedia'>
-                        <a href='https://facebook.com/'><BiLogoFacebookCircle /></a>
-                        <a href='https://instagram.com/akash_kaushik22'><AiFillInstagram /></a>
-                        <a href='https://github.com/akash2001k'><AiFillGithub /></a>
+                        <a href='https://www.facebook.com/profile.php?id=100008751255958' target='_blank'><BiLogoFacebookCircle /></a>
+                        <a href='https://instagram.com/akash_kaushik22'target='_blank'><AiFillInstagram /></a>
+                        <a href='https://github.com/akash2001k' target='_blank'><AiFillGithub /></a>
                     </div>
                 </aside>
             </footer>

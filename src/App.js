@@ -24,6 +24,7 @@ import AllOrders from './Components/Admin/All-Orders/AllOrders';
 import MoreDetails from './Components/Admin/All-Orders/MoreDetails';
 import Footer from './Components/Layouts/Footer';
 import Dashboard from './Components/Admin/Dashboard/Dashboard';
+import AboutUs from './Components/Layouts/AboutUs/AboutUs';
 
 function App() {
   return (
@@ -51,6 +52,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
         <Route path='/contactus' element={<Contact />} />
+        <Route path='/aboutus' element={<AboutUs />} />
 
 
         <Route element={<AdminPages />}>
