@@ -1,7 +1,5 @@
 .order{
-    height: 100vh;
-    // display: flex;
-    // align-items: center;
+    min-height: 100vh;
     background: url('../../../Assets/bg2.JPG');
     background-size: cover;
     padding: 140px 0 20px 0 ;
@@ -9,13 +7,17 @@
     >.container{
         display: flex;
 
+        h3{
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #434343;
+        }
+
         >.orderDetails{
           width: 55%;
-        //   border: 1px solid;
 
           .key{
             font-size: 17px;
-            // text-transform: uppercase;
           }
           .value{
             font-size: 18px;
@@ -39,7 +41,7 @@
           width: 45%;
         //   border: 1px solid;
           >img{
-            width: 350px;
+            width: 400px;
             margin-top: 100px;
           }
         }
@@ -115,4 +117,28 @@
         outline-color: transparent;
       }
       
+}
+
+@media screen and (max-width: 900px) {
+  .order{
+
+    padding: 96px 10px 20px ;
+    >.container{
+        display: flex;
+        flex-direction: column;
+
+        .orderDetails{
+          width: 100%;
+        }
+
+        .order_img{
+          width: 100%;
+        //   border: 1px solid;
+          >img{
+            width: 300px;
+            margin-top: 0px;
+          }
+        }
+    }
+  }  
 }

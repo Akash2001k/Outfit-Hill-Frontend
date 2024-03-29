@@ -31,7 +31,7 @@ const Navbar = () => {
         <>
             <nav>
                 <div className='nav_first'>
-                    <img width="80px" src={brand} />
+                    <a href='https://outfit-hill.vercel.app/'><img width="80px" src={brand} /></a>
                     <ul className='nav_items_ls'>
                         <li><Link to='/'>Store</Link></li>
                         <li><Link to='/men'>Men</Link></li>

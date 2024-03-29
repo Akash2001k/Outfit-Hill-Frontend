@@ -35,7 +35,7 @@
   }
   
   .popup .close:hover {
-    color: rgb(15, 114, 22);
+    color: rgba(15, 114, 22, 0.705);
     transform: rotate(90deg);
   }
 
@@ -57,4 +57,11 @@
   .popup .close_error:hover {
     color: #e85454;
     transform: rotate(90deg);
+  }
+
+  @media screen and (max-width: 750px) {
+    .popup {
+      width: 70%;
+    }
+   
   }
