@@ -43,3 +43,62 @@
         }
     }
 }
+#title_brand{
+    min-width: 22%;
+}
+#ord{
+    min-width: 15%;
+}
+#sv{
+    min-width: 13%;
+}
+
+@media screen and (max-width: 1000px) {
+
+    #title_brand{
+        width: 100%;
+    }
+    #ord{
+        width: 100%;
+    }
+    #sv{
+        width: 100%;
+    }
+    
+    .myOrders {
+        padding: 100px 0 20px;
+    
+        >.container {
+            >.order_cards {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                flex-direction: column;
+                padding: 15px;
+                min-height: 12vh;
+                margin: 7px 0;
+    
+                .order_card_field{
+                    display: flex;
+                    margin: auto;
+                    justify-content: space-between;
+                    width: 100%;
+                    margin: 3px 0;
+                    
+                    >.field{
+                        margin:0 10px;
+                        font-size: 15px;
+                    }
+    
+                    .head{
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+    
+                }
+    
+            }
+        }
+    }
+    
+}

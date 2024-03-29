@@ -63,25 +63,25 @@ const OrderCard = ({ title, brand, status, orderedTime, size, color, quantity, u
 
     return (
         <div className='order_cards'>
-            <div style={{width:"30%"}} className='order_card_field'>
-                <span className='head'>Title</span><br />
+            <div id='title_brand' className='order_card_field'>
+                <span  className='head'>Title</span><br />
                 <span className='field'>{title}</span>
             </div>
-            <div style={{width:"20%"}} className='order_card_field'>
-                <span className='head'>Brand</span><br />
+            <div id='title_brand' className='order_card_field'>
+                <span  className='head'>Brand</span><br />
                 <span className='field'>{brand}</span>
             </div>
-            <div style={{width:"20%"}} className='order_card_field'>
+            <div id='ord' className='order_card_field'>
                 <span className='head'>Ordered At</span><br />
                 <span className='field'> {istDateString}</span>
             </div>
 
-            <div style={{width:"15%"}} className='order_card_field'>
-                <span className='head'>Status</span><br />
-                {showStatus}
+            <div id='sv' className='order_card_field'>
+                <span className='head'>Status</span><br/>
+                <span className='field'>{showStatus}</span>
             </div>
 
-            <div style={{width:"10%"}} className='order_card_field'>
+            <div id='sv' className='order_card_field'>
                 <span className='head'>View Details</span><br />
                 <p onClick={goToOrderDetails}><PiNoteFill style={{ fontSize: "25px", margin: "0 25px" }} /></p>
             </div>

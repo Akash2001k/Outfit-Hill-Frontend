@@ -52,7 +52,7 @@ const Navbar = () => {
 
                         <div>
                             {
-                                auth ? <Link><IoMdNotifications /></Link> : ""
+                                auth ? <Link className='mx-2'><IoMdNotifications /></Link> : ""
                             }
                         </div>
                         <div >
