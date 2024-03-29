@@ -24,7 +24,7 @@ const Login = () => {
         alert("Please fill all the field")
       }
       else {
-        let result = await fetch("http://localhost:7000/login", {
+        let result = await fetch(`${process.env.REACT_APP_API}/login`, {
           method: "POST",
           body: JSON.stringify({ email, password }),
           headers: {

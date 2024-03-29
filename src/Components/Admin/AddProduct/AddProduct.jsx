@@ -48,14 +48,13 @@ const AddProduct = () => {
     // console.log(formData.title,formData.brand,formData.image)
 
     try {
-      const response = await fetch('http://localhost:7000/admin/createproduct', {
+      const response = await fetch(`${process.env.REACT_APP_API}/createproduct`, {
         method: 'POST',
         body: formDataToSend,
         headers:{
           Authorization:`Bearer ${localStorage.getItem('token')}`
         }
       });
-
       if (response.ok) {
         const data = await response.json();
         // console.log('Product created successfully:', data);

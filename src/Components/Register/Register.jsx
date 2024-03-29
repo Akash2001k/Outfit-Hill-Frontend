@@ -175,7 +175,7 @@ const Register = () => {
             }
             else {
                 
-                let result = await fetch('http://localhost:7000/register', {
+                let result = await fetch(`${process.env.REACT_APP_API}/register`, {
                     method: 'POST',
                     body: JSON.stringify({
                         name: formData.Name,
@@ -212,7 +212,7 @@ const Register = () => {
                     <div className='reg_img'>
                         <img src={img} alt='Registration' />
                         <div>
-                            <h4>Create Account</h4>
+                            <h4 className='text-light'>Create Account</h4>
                             <p className='mt-3'>Outfit Hill has thousand of products<br />You can purchase that outfit you want </p>
                         </div>
                     </div>

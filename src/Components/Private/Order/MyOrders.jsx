@@ -97,7 +97,7 @@ const MyOrders = () => {
     
     const getOrderData = async () => {
         try {
-            let result = await fetch(`http://localhost:7000/myorders/${user._id}`,{
+            let result = await fetch(`${process.env.REACT_APP_API}/myorders/${user._id}`,{
                 headers:{
                     Authorization:`Bearer ${localStorage.getItem('token')}`
                   }

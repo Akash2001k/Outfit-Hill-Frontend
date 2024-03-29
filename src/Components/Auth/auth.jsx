@@ -38,7 +38,7 @@ const userAuthentication = async () => {
         }
 
         // Token is valid, proceed with authentication
-        const response = await fetch('http://localhost:7000/auth/user', {
+        const response = await fetch(`${process.env.REACT_APP_API}/auth/user`, {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`

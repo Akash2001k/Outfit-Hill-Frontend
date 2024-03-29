@@ -40,7 +40,7 @@ const ContactList = () => {
 
   const getMessages = async () => {
     try {
-      let result = await fetch('http://localhost:7000/admin/allcontact',{
+      let result = await fetch(`${process.env.REACT_APP_API}/admin/allcontact`,{
         headers:{
           Authorization:`Bearer ${localStorage.getItem('token')}`
         }
@@ -55,7 +55,7 @@ const ContactList = () => {
 
   const deleteContact = async (id) => {
     getMessages()
-    let result = await fetch(`http://localhost:7000/admin/contact/${id}`, {
+    let result = await fetch(`${process.env.REACT_APP_API}/admin/contact/${id}`, {
       method: "Delete",
       headers:{
         Authorization:`Bearer ${localStorage.getItem('token')}`

@@ -39,7 +39,7 @@ const CompleteOrderDetails = () => {
 
     const deleteOrder = async () => {
         try {
-            await fetch(`http://localhost:7000/order/${location.state.id}`, {
+            await fetch(`${process.env.REACT_APP_API}/order/${location.state.id}`, {
                 method: "Delete",
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`

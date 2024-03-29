@@ -9,7 +9,7 @@ const HomeAndLiving = () => {
   const [loading, setLoading] = useState(true);
 
   const getProduct = async () => {
-    let result = await fetch("http://localhost:7000/allproduct")
+    let result = await fetch(`${process.env.REACT_APP_API}/allproduct`)
     result = await result.json()
     setProducts(result)
     setLoading(false)
@@ -24,7 +24,7 @@ const HomeAndLiving = () => {
   const searchHandle = async (e) => {
     let key = e.target.value;
     if (key) {
-      let result = await fetch(`http://localhost:7000/searchproduct/${key}`, {
+      let result = await fetch(`${process.env.REACT_APP_API}/searchproduct/${key}`, {
       })
       result = await result.json()
       if (result) {

@@ -10,7 +10,7 @@ const Cards = ({ title, brand, discount, maxPrice, image,id }) => {
 
   return (
       <div className='webCard col'>
-        <img src={'http://localhost:7000/uploads/' + image} alt='img' />
+        <img src={`${process.env.REACT_APP_API}/uploads/` + image} alt='img' />
         <div className='content p-2'>
           <h6>{brand}</h6>
           <p style={{ marginTop: "-6px" }}>{title}</p>

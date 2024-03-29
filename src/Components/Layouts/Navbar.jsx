@@ -46,7 +46,7 @@ const Navbar = () => {
 
                         <div>
                             {
-                                auth ? <Link to='/profile'><BiSolidUser /></Link> : <Link to='/login'><BiLogInCircle /></Link>
+                                auth ? <Link to='/profile'><BiSolidUser /></Link> : <Link to='/login'><BiLogInCircle className='mx-2'/></Link>
                             }
                         </div>
 

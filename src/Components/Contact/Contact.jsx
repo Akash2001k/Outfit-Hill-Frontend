@@ -42,7 +42,7 @@ const Contact = () => {
   const addMessage = async (e) => {
     try {
       e.preventDefault()
-      await fetch('http://localhost:7000/contact', {
+      await fetch(`${process.env.REACT_APP_API}/contact`, {
         method: "POST",
         body: JSON.stringify({
           name: contact.name,

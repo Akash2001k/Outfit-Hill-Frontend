@@ -32,7 +32,7 @@ const UpdateProduct = () => {
   };
 
   const getProductDetails = async () => {
-    let result = await fetch(`http://localhost:7000/getproduct/${params.id}`,{
+    let result = await fetch(`${process.env.REACT_APP_API}/getproduct/${params.id}`,{
       headers:{
         Authorization:`Bearer ${localStorage.getItem('token')}`
       }
@@ -48,7 +48,7 @@ const updateProduct = async () => {
   alert("Product Updated")
   navigate(`/preview/${params.id}`)
 
-  let result = await fetch(`http://localhost:7000/admin/updateproduct/${params.id}`, {
+  let result = await fetch(`${process.env.REACT_APP_API}/admin/updateproduct/${params.id}`, {
       method: "PUT",
       body: JSON.stringify({
         title:productData.title,

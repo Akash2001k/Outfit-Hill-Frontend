@@ -11,7 +11,7 @@ const AllOrders = () => {
   const navigate = useNavigate();
 
   const getOrders = async () => {
-    let result = await fetch("http://localhost:7000/admin/allorders", {
+    let result = await fetch(`${process.env.REACT_APP_API}/admin/allorders`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('token')}`
       }

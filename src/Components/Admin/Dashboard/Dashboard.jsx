@@ -16,7 +16,7 @@ const Dashboard = () => {
     const [delever, setDelever] = useState('')
 
     const getResult = async () => {
-        let result = await fetch("http://localhost:7000/admin/allorders", {
+        let result = await fetch(`${process.env.REACT_APP_API}/admin/allorders`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }

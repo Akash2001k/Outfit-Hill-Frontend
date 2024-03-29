@@ -1,15 +1,25 @@
 .contact {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     background: url('../../Assets/bg2.JPG');
     background-size: cover;
+    padding-top: 40px ;
 
     >.container {
         display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
 
-        >.contact_form {
+        h3{
+            font-weight: 400;
+            text-transform: uppercase;
+            color: #63636d;
+        }
+
+        > .contact_form {
             width: 50%;
+            // border: 1px solid red;
 
             label{
                 text-transform: uppercase;
@@ -42,14 +52,35 @@
 
         .contact_img {
           width: 50%;
-          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           >img{
-            width: 600px;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            margin: -100px;
+            width: 550px;
+            margin-top: 150px;
+            margin-left: 150px;
           }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .contact {
+        padding-top: 90px;
+        >.container {
+            display: flex;
+            flex-direction: column;
+
+            .contact_form {
+                width: 100%;
+            }
+            .contact_img {
+                width: 100%;
+                >img{
+                  width: 370px;
+                  margin: 0;
+                }
+              }
         }
     }
 }

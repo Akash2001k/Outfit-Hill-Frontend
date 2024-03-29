@@ -23,7 +23,7 @@ const Preview = () => {
     }, [])
 
     const getProductDetails = async () => {
-        let result = await fetch(`http://localhost:7000/getproduct/${params.id}`)
+        let result = await fetch(`${process.env.REACT_APP_API}/getproduct/${params.id}`)
         result = await result.json();
         // console.log(result)
         setProductData(result)
@@ -34,7 +34,7 @@ const Preview = () => {
     const deleteProduct = async () => {
 
         alert("Prdouct is Deleted")
-        let result = await fetch(`http://localhost:7000/admin/deleteproduct/${params.id}`, {
+        let result = await fetch(`${process.env.REACT_APP_API}/admin/deleteproduct/${params.id}`, {
             method: "Delete",
             headers:{
                 Authorization:`Bearer ${localStorage.getItem('token')}`
@@ -55,7 +55,7 @@ const Preview = () => {
                 <div className='preview'>
                     <div className='img_div'>
                         <div>{productdata.discountPer}% OFF</div>
-                        <img src={'http://localhost:7000/uploads/' + productdata.image} alt='img' />
+                        <img src={`${process.env.REACT_APP_API}/uploads/` + productdata.image} alt='img' />
                     </div>
                     <div className='content_div'>
                         <h3>{productdata.brand}</h3>
@@ -63,14 +63,14 @@ const Preview = () => {
 
                         <div className='starrating d-flex'>
                             <div className='d-flex'>
-                                <MdOutlineStar style={{ fontSize: "22px", color: "#e8597b" }} />
+                                <MdOutlineStar style={{ fontSize: "22px", color: "#fcd71e" }} />
                                 <p style={{ fontWeight: "600", color: "gray" }}>4.5</p>
                             </div>
 
                             <p style={{ borderLeft: "2px solid gray", fontWeight: "600" }} className='mx-2 px-2'>345 Ratings</p>
                         </div>
                         <hr />
-                        <div className='d-flex'>
+                        <div style={{display:"flex",flexWrap:"wrap"}}>
                             <h5>₹ {realPriceInt}</h5>
                             <p style={{ textDecoration: "line-through", margin: '-1px 6px 0', color: "gray", fontSize: "18px" }}>₹ {productdata.maxPrice}</p>
                             <p style={{ margin: '0 5px 0', color: "green", fontSize: "17px", fontWeight: "600" }}> {productdata.discountPer}% OFF (inclusive of all taxes)</p>

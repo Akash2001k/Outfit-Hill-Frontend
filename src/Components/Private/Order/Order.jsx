@@ -20,7 +20,7 @@ const Order = () => {
     const orderProduct = async (e) => {
         try {
             e.preventDefault()
-            await fetch('http://localhost:7000/createorder', {
+            await fetch(`${process.env.REACT_APP_API}/createorder`, {
                 method: 'POST',
                 body: JSON.stringify({
                     order_details: {

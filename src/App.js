@@ -27,6 +27,7 @@ import Dashboard from './Components/Admin/Dashboard/Dashboard';
 import AboutUs from './Components/Layouts/AboutUs/AboutUs';
 
 function App() {
+
   return (
     <div className="App">
       <Navbar />

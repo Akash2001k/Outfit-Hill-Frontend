@@ -18,7 +18,7 @@ const MoreDetails = () => {
     const [user, setUser] = useState("")
 
     const getUser = async () => {
-        let result = await fetch(`http://localhost:7000/admin/user/${location.state.userId}`, {
+        let result = await fetch(`${process.env.REACT_APP_API}/admin/user/${location.state.userId}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }
@@ -64,7 +64,7 @@ const MoreDetails = () => {
     const updateStatus = async () => {
 
         try {
-            let result = await fetch(`http://localhost:7000/admin/order/${location.state.id}`, {
+            let result = await fetch(`${process.env.REACT_APP_API}/admin/order/${location.state.id}`, {
                 method: "PUT",
                 body: JSON.stringify({
                     order_details: {
@@ -100,7 +100,7 @@ const MoreDetails = () => {
 
     const deleteOrder = async () => {
         try {
-            await fetch(`http://localhost:7000/order/${location.state.id}`, {
+            await fetch(`${process.env.REACT_APP_API}/order/${location.state.id}`, {
                 method: "Delete",
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem('token')}`
